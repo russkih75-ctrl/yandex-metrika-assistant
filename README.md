@@ -6,8 +6,6 @@
 
 **Навык OpenClaw + документация для API Яндекс.Метрики**
 
-**Автор:** [Андрей Русских](https://wordprais.ru) — WordPress, SEO/GEO · [wordprais.ru](https://wordprais.ru) · [@wordprais](https://t.me/wordprais) · [Instagram](https://www.instagram.com/wordprais/)
-
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](./LICENSE)
 [![API Docs](https://img.shields.io/badge/API-Яндекс.Метрика-red)](https://yandex.ru/dev/metrika)
 [![Telegram](https://img.shields.io/badge/Telegram-@wordprais-26A5E4?logo=telegram)](https://t.me/wordprais)
@@ -19,19 +17,50 @@
 
 ---
 
-## Установка для человека — начните здесь
+## В двух словах
 
-Полная пошаговая инструкция (OpenClaw → приложение OAuth → галочки Метрике → токен → **что спросить агенту после ключа**):
+**Что касается навыка `yandex-metrika-assistant`:** это **прямая связь вашего агента с Яндекс.Метрикой** — так удобнее и быстрее работать со статистикой сайта, страниц и многого другого; возможностей много.
 
-### [docs/INSTALL-FOR-HUMANS-RU.md](./docs/INSTALL-FOR-HUMANS-RU.md)
+**Автор:** [Андрей Русских](https://wordprais.ru) — WordPress, SEO/GEO · [wordprais.ru](https://wordprais.ru) · [@wordprais](https://t.me/wordprais) · [Instagram](https://www.instagram.com/wordprais/).
 
-**Поддержка:** [Telegram @wordprais](https://t.me/wordprais) · [Instagram @wordprais](https://www.instagram.com/wordprais/) — вопросы по установке, OpenClaw, автоматизации и нейросетям.
+### Установка
+
+Всё просто: **попросите агента установить этот навык** и передайте **одну из ссылок**:
+
+- **[GitHub — репозиторий](https://github.com/russkih75-ctrl/yandex-metrika-assistant)** — клонирование, папка навыка, плагин OpenClaw  
+- **[ClawHub / OpenClaw CLI](https://docs.openclaw.ai/tools/clawhub)** — установка навыков в workspace (`openclaw skills install …`)
+
+Полная пошаговая инструкция (OAuth, галочки, токен, первые запросы к агенту): **[docs/INSTALL-FOR-HUMANS-RU.md](./docs/INSTALL-FOR-HUMANS-RU.md)**
+
+**Поддержка:** [Telegram @wordprais](https://t.me/wordprais) · [Instagram @wordprais](https://www.instagram.com/wordprais/).
+
+### Получение ключа доступа к API Метрики
+
+Создайте приложение на **[oauth.yandex.ru](https://oauth.yandex.ru/)**:
+
+| Параметр | Значение |
+|----------|----------|
+| Тип приложения | «Для доступа к API» (или аналог в кабинете) |
+| Доступ к сервисам | **Яндекс.Метрика** — отметьте нужные возможности галочками |
+
+Ниже — **scope** OAuth (в кабинете они могут отображаться текстом, а не этими строками):
+
+| Scope | Назначение |
+|-------|------------|
+| `metrika:read` | Отчёты и чтение счётчиков |
+| `metrika:write` | Создание и изменение счётчиков и настроек |
+| `metrika:expenses` | Загрузка расходов |
+| `metrika:user_params` | Параметры посетителей |
+| `metrika:offline_data` | Офлайн-данные, CRM, звонки |
+
+Детали выдачи токена: **[docs/INSTRUCTION-GET-TOKEN-RU.md](./docs/INSTRUCTION-GET-TOKEN-RU.md)**
 
 ---
 
 ## Содержание
 
-- [Установка для человека](#установка-для-человека--начните-здесь)
+- [В двух словах](#в-двух-словах)
+- [Установка для человека (полный гайд)](#установка-для-человека--полный-гайд)
 - [Зачем этот репозиторий](#зачем-этот-репозиторий)
 - [Кому подойдёт](#кому-подойдёт)
 - [Что умеет навык](#что-умеет-навык)
@@ -43,6 +72,12 @@
 - [Конфигурация плагина](#конфигурация-плагина)
 - [Безопасность](#безопасность)
 - [Ссылки](#ссылки)
+
+---
+
+## Установка для человека — полный гайд
+
+Все шаги по порядку (OpenClaw, приложение на [oauth.yandex.ru](https://oauth.yandex.ru/), галочки Метрики, токен, первые запросы агенту): **[docs/INSTALL-FOR-HUMANS-RU.md](./docs/INSTALL-FOR-HUMANS-RU.md)**.
 
 ---
 
