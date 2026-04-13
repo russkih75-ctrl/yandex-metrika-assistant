@@ -62,7 +62,7 @@ Set-Location "C:\path\to\yandex-metrika-assistant"
 - [INSTALL-FOR-HUMANS-RU.md](./docs/INSTALL-FOR-HUMANS-RU.md)
 - [INSTRUCTION-GET-TOKEN-RU.md](./docs/INSTRUCTION-GET-TOKEN-RU.md)
 
-Исходник идей и апстрим: [Horosheff/yandex-metrika-assistant](https://github.com/Horosheff/yandex-metrika-assistant) (MIT). Этот репозиторий — ветка с контактами **Андрея Русских** (Telegram, Instagram).
+Автор навыка и документации: **Андрей Русских** — [Telegram](https://t.me/wordprais), [Instagram](https://www.instagram.com/wordprais/).
 
 ## Безопасность
 

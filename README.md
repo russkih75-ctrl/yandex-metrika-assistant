@@ -17,7 +17,7 @@
 
 </div>
 
-> **Апстрим:** навык изначально основан на [Horosheff/yandex-metrika-assistant](https://github.com/Horosheff/yandex-metrika-assistant) (MIT). Здесь сохранена та же структура и документация по API; добавлены контакты автора (**Telegram** и **Instagram**). Репозиторий автора: [russkih75-ctrl/yandex-metrika-assistant](https://github.com/russkih75-ctrl/yandex-metrika-assistant).
+> Репозиторий и навык: **Андрей Русских** — исходный код, документация по API Метрики и сценарии для OpenClaw. Контакты: [Telegram](https://t.me/wordprais) · [Instagram](https://www.instagram.com/wordprais/). GitHub: [russkih75-ctrl/yandex-metrika-assistant](https://github.com/russkih75-ctrl/yandex-metrika-assistant).
 
 ---
 
@@ -231,13 +231,13 @@ yandex-metrika-assistant/
 | Документация API Метрики | https://yandex.ru/dev/metrika |
 | Примеры отчётов | https://yandex.ru/dev/metrika/ru/stat/examples |
 | Шаблоны отчётов (preset) | https://yandex.ru/dev/metrika/ru/stat/presets |
-| Апстрим (оригинальный репозиторий) | [Horosheff/yandex-metrika-assistant](https://github.com/Horosheff/yandex-metrika-assistant) |
+| Репозиторий на GitHub | [russkih75-ctrl/yandex-metrika-assistant](https://github.com/russkih75-ctrl/yandex-metrika-assistant) |
 
 ---
 
 ## Лицензия
 
-Проект распространяется под лицензией **MIT** — см. файл [LICENSE](./LICENSE). Учтены авторские права апстрима и **Андрея Русских**.
+Проект распространяется под лицензией **MIT** — см. файл [LICENSE](./LICENSE). Автор: **Андрей Русских**.
 
 ---
 

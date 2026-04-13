@@ -95,6 +95,6 @@
 
 ---
 
-## Апстрим и автор
+## Автор
 
-Навык основан на репозитории [Horosheff/yandex-metrika-assistant](https://github.com/Horosheff/yandex-metrika-assistant) (MIT). Эта ветка поддерживается **Андреем Русских** — актуальные контакты: Telegram и Instagram по ссылкам выше.
+Навык, документация и сценарии для OpenClaw: **Андрей Русских**. Актуальные контакты — Telegram и Instagram по ссылкам выше в этом файле.
