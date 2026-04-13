@@ -17,7 +17,7 @@
 
 </div>
 
-> **Апстрим:** навык изначально основан на [Horosheff/yandex-metrika-assistant](https://github.com/Horosheff/yandex-metrika-assistant) (MIT). Здесь сохранена та же структура и документация по API; добавлены контакты автора (**Telegram** и **Instagram**). Если ваш логин на GitHub не `wordprais`, замените URL в командах `git clone` на свой после создания репозитория.
+> **Апстрим:** навык изначально основан на [Horosheff/yandex-metrika-assistant](https://github.com/Horosheff/yandex-metrika-assistant) (MIT). Здесь сохранена та же структура и документация по API; добавлены контакты автора (**Telegram** и **Instagram**). Репозиторий автора: [russkih75-ctrl/yandex-metrika-assistant](https://github.com/russkih75-ctrl/yandex-metrika-assistant).
 
 ---
 
@@ -138,7 +138,7 @@ flowchart LR
 1. **Клонируйте** репозиторий (или скопируйте папку в каталог навыков OpenClaw):
 
    ```bash
-   git clone https://github.com/wordprais/yandex-metrika-assistant.git
+   git clone https://github.com/russkih75-ctrl/yandex-metrika-assistant.git
    ```
 
 2. Установите плагин, например: `openclaw plugins install ./yandex-metrika-assistant` (или путь к клону), включите **`yandex-metrika-assistant`** в `plugins.entries`. В манифесте объявлено **`"skills": ["."]`**, чтобы OpenClaw подгрузил этот же каталог как навык.

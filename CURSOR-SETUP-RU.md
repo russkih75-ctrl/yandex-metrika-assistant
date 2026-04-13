@@ -2,7 +2,7 @@
 
 ## Где лежит скилл
 
-Склонируйте [этот репозиторий](https://github.com/wordprais/yandex-metrika-assistant) в удобное место на диске или добавьте как подмодуль.  
+Склонируйте [этот репозиторий](https://github.com/russkih75-ctrl/yandex-metrika-assistant) в удобное место на диске или добавьте как подмодуль.  
 В Cursor навыки часто кладут в **`.cursor/skills/yandex-metrika-assistant`** — путь задайте сами, главное чтобы папка совпадала с путём в `openclaw plugins install`.
 
 ## OpenClaw (плагин)

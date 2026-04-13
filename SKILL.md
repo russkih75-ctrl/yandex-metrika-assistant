@@ -1,7 +1,7 @@
 ---
 name: yandex-metrika-assistant
 description: OpenClaw + Яндекс.Метрика API — stat/Logs/management, OAuth, presets, UTM, цели, CSV, квоты; плагин yandex-metrika-assistant.
-homepage: https://github.com/wordprais/yandex-metrika-assistant
+homepage: https://github.com/russkih75-ctrl/yandex-metrika-assistant
 ---
 
 # Яндекс.Метрика API — заточка под **OpenClaw**

@@ -8,7 +8,7 @@
 
 1. Склонируйте репозиторий или скачайте архив:
    ```bash
-   git clone https://github.com/wordprais/yandex-metrika-assistant.git
+   git clone https://github.com/russkih75-ctrl/yandex-metrika-assistant.git
    ```
 2. Установите как **плагин** (рекомендуется, в корне есть `openclaw.plugin.json`):
    ```bash
