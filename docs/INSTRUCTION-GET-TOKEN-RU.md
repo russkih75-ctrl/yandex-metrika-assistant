@@ -1,6 +1,6 @@
 # Как получить ключ доступа к API Яндекс.Метрики
 
-**Поддержка и вопросы по установке:** [**Telegram @wordprais**](https://t.me/wordprais), [**Instagram**](https://www.instagram.com/wordprais/). Токены и пароли в открытый чат не отправляйте.
+**Поддержка (автор — Андрей Русских):** [**Telegram @wordprais**](https://t.me/wordprais), [**Instagram**](https://www.instagram.com/wordprais/), сайт [**wordprais.ru**](https://wordprais.ru). Токены и пароли в открытый чат не отправляйте.
 
 Перед первым получением токена удобно пройти полную установку: **[INSTALL-FOR-HUMANS-RU.md](./INSTALL-FOR-HUMANS-RU.md)**.
 

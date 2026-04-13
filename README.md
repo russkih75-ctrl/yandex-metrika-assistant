@@ -6,7 +6,7 @@
 
 **Навык OpenClaw + документация для API Яндекс.Метрики**
 
-**Автор этого репозитория:** [Андрей Русских](https://t.me/wordprais) — WordPress, SEO/GEO, автоматизация.
+**Автор:** [Андрей Русских](https://wordprais.ru) — WordPress, SEO/GEO · [wordprais.ru](https://wordprais.ru) · [@wordprais](https://t.me/wordprais) · [Instagram](https://www.instagram.com/wordprais/)
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](./LICENSE)
 [![API Docs](https://img.shields.io/badge/API-Яндекс.Метрика-red)](https://yandex.ru/dev/metrika)
@@ -16,8 +16,6 @@
 *Отчёты · Logs · Счётчики и цели · OAuth · Сценарии для нейросети*
 
 </div>
-
-> Репозиторий и навык: **Андрей Русских** — исходный код, документация по API Метрики и сценарии для OpenClaw. Контакты: [Telegram](https://t.me/wordprais) · [Instagram](https://www.instagram.com/wordprais/). GitHub: [russkih75-ctrl/yandex-metrika-assistant](https://github.com/russkih75-ctrl/yandex-metrika-assistant).
 
 ---
 
@@ -45,7 +43,6 @@
 - [Конфигурация плагина](#конфигурация-плагина)
 - [Безопасность](#безопасность)
 - [Ссылки](#ссылки)
-- [Лицензия](#лицензия)
 
 ---
 
@@ -141,7 +138,7 @@ flowchart LR
    git clone https://github.com/russkih75-ctrl/yandex-metrika-assistant.git
    ```
 
-2. Установите плагин, например: `openclaw plugins install ./yandex-metrika-assistant` (или путь к клону), включите **`yandex-metrika-assistant`** в `plugins.entries`. В манифесте объявлено **`"skills": ["."]`**, чтобы OpenClaw подгрузил этот же каталог как навык.
+2. Установите плагин, например: `openclaw plugins install ./yandex-metrika-assistant` (или путь к клону), включите **`yandex-metrika-assistant`** в `plugins.entries`. В манифесте объявлено **`skills": ["."]`**, чтобы OpenClaw подгрузил этот же каталог как навык.
 
 3. В конфиге плагина задайте **`oauthToken`**. Опционально: **`defaultCounterId`**, **`oauthClientId`**.
 
@@ -191,7 +188,7 @@ yandex-metrika-assistant/
 ├── scripts/
 │   └── exchange-yandex-oauth-code.ps1
 └── docs/
-    ├── INSTALL-FOR-HUMANS-RU.md  # Порядок установки + OAuth + контакты + «с чего начать»
+    ├── INSTALL-FOR-HUMANS-RU.md  # Порядок установки + OAuth + TG + «с чего начать»
     ├── OPENCLAW-AGENT.md    # Для агента: HOOK.md не нужен; кавычки PowerShell
     ├── EXAMPLES.md          # Примеры curl / PowerShell
     ├── INSTRUCTION-GET-TOKEN-RU.md
@@ -226,23 +223,23 @@ yandex-metrika-assistant/
 | Ресурс | URL |
 |--------|-----|
 | Установка для человека | [INSTALL-FOR-HUMANS-RU.md](./docs/INSTALL-FOR-HUMANS-RU.md) |
-| Telegram | [**https://t.me/wordprais**](https://t.me/wordprais) |
-| Instagram | [**https://www.instagram.com/wordprais/**](https://www.instagram.com/wordprais/) |
+| Поддержка (Telegram) | [**https://t.me/wordprais**](https://t.me/wordprais) |
+| Поддержка (Instagram) | [**https://www.instagram.com/wordprais/**](https://www.instagram.com/wordprais/) |
 | Документация API Метрики | https://yandex.ru/dev/metrika |
 | Примеры отчётов | https://yandex.ru/dev/metrika/ru/stat/examples |
 | Шаблоны отчётов (preset) | https://yandex.ru/dev/metrika/ru/stat/presets |
-| Репозиторий на GitHub | [russkih75-ctrl/yandex-metrika-assistant](https://github.com/russkih75-ctrl/yandex-metrika-assistant) |
+| Telegram: автоматизация и нейросети | [**https://t.me/wordprais**](https://t.me/wordprais) · Instagram: [**@wordprais**](https://www.instagram.com/wordprais/) |
 
 ---
 
 ## Лицензия
 
-Проект распространяется под лицензией **MIT** — см. файл [LICENSE](./LICENSE). Автор: **Андрей Русских**.
+Проект распространяется под лицензией **MIT** — см. файл [LICENSE](./LICENSE).
 
 ---
 
 <div align="center">
 
-Если репозиторий полезен — звезда на GitHub приветствуется. Контакты: [**@wordprais в Telegram**](https://t.me/wordprais) и [**Instagram**](https://www.instagram.com/wordprais/).
+Если репозиторий полезен — можно поставить звезду на GitHub и заглянуть в [**@wordprais в Telegram**](https://t.me/wordprais) или [**Instagram**](https://www.instagram.com/wordprais/).
 
 </div>

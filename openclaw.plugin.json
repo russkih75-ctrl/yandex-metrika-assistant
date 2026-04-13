@@ -2,7 +2,7 @@
   "id": "yandex-metrika-assistant",
   "name": "Yandex Metrika Assistant",
   "version": "1.0.0",
-  "description": "Yandex Metrika Assistant — OpenClaw: API Яндекс.Метрики (stat, Logs, management, импорт, OAuth). Автоматизация аналитики и AI-агенты. Автор: Андрей Русских. Каналы: https://t.me/wordprais · https://www.instagram.com/wordprais/",
+  "description": "Yandex Metrika Assistant — OpenClaw: API Яндекс.Метрики (stat, Logs, management, импорт, OAuth). Автор: Андрей Русских · wordprais.ru · https://t.me/wordprais · https://www.instagram.com/wordprais/",
   "skills": ["."],
   "uiHints": {
     "oauthToken": {

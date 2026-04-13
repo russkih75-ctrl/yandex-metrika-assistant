@@ -1,7 +1,6 @@
 .env
 .env.*
 *.local
-local.oauth.env
 .DS_Store
 Thumbs.db
 *.log

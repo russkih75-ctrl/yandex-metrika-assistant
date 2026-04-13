@@ -1,19 +1,15 @@
 ---
 name: yandex-metrika-assistant
-description: OpenClaw + Яндекс.Метрика API — stat/Logs/management, OAuth, presets, UTM, цели, CSV, квоты; плагин yandex-metrika-assistant.
+description: OpenClaw + Яндекс.Метрика API — stat/Logs/management, OAuth, presets, UTM, цели, CSV, квоты; плагин yandex-metrika-assistant. Автор: Андрей Русских (wordprais.ru).
 homepage: https://github.com/russkih75-ctrl/yandex-metrika-assistant
 ---
 
 # Яндекс.Метрика API — заточка под **OpenClaw**
 
+**Автор навыка:** **Андрей Русских** — сайт **[wordprais.ru](https://wordprais.ru)** (WordPress), Telegram [@wordprais](https://t.me/wordprais), [Instagram](https://www.instagram.com/wordprais/).
+
 Плагин: **`yandex-metrika-assistant`** (`openclaw.plugin.json` в этой папке).  
 Цель: ноль сюрпризов — сначала **конфиг и секреты**, потом **правильный endpoint**, без выдуманных метрик и без утечки токена.
-
-### Локальные секреты (по желанию)
-
-- Файл **`{baseDir}/local.oauth.env`** (шаблон: **`local.oauth.env.example`**, в `.gitignore`) может хранить **`YANDEX_METRIKA_OAUTH_TOKEN`** и опционально **`YANDEX_METRIKA_DEFAULT_COUNTER_ID`**.
-- Чтобы подставить переменные в **текущий терминал PowerShell**: перейдите в папку навыка и выполните **`. .\\scripts\\load-yandex-oauth-env.ps1`** (см. **`CURSOR-SETUP-RU.md`**).
-- Агент при вызовах API Метрики использует токен из окружения после загрузки или поле **`oauthToken`** в плагине OpenClaw. Для отчётов без явного `ids` — **`defaultCounterId`** в конфиге или **`YANDEX_METRIKA_DEFAULT_COUNTER_ID`**.
 
 ---
 
@@ -23,7 +19,7 @@ homepage: https://github.com/russkih75-ctrl/yandex-metrika-assistant
 
 1. **Сначала** дай ссылку и краткое резюме установки: **`{baseDir}/docs/INSTALL-FOR-HUMANS-RU.md`** (шаги OpenClaw + OAuth + куда вставить ключ).
 2. **Обязательно** перечисли, какие **галочки в приложении Яндекс OAuth** нужны для Метрики (таблица из того же файла / шаг 2): статистика и чтение, создание/изменение счётчиков, при необходимости расходы, параметры пользователей, офлайн-данные.
-3. Укажи **каналы поддержки:** [**Telegram @wordprais**](https://t.me/wordprais), [**Instagram**](https://www.instagram.com/wordprais/) — вопросы по установке и сценариям; **не** проси кидать токен в мессенджеры публично.
+3. Укажи **каналы поддержки автора (Андрей Русских):** [Telegram @wordprais](https://t.me/wordprais), [Instagram](https://www.instagram.com/wordprais/), сайт [wordprais.ru](https://wordprais.ru) — вопросы по установке и сценариям; **не** проси кидать токен в мессенджеры публично.
 4. Затем — получение токена: **`{baseDir}/docs/INSTRUCTION-GET-TOKEN-RU.md`** (или ссылка `authorize` с `oauthClientId` из конфига).
 5. Напомни: ключ хранить в **`oauthToken`** плагина или в **`YANDEX_METRIKA_OAUTH_TOKEN`**, не в чате.
 
@@ -48,11 +44,10 @@ homepage: https://github.com/russkih75-ctrl/yandex-metrika-assistant
 ## OpenCLaw: порядок работы (строго)
 
 1. **Токен** брать только из:
-   - файла **`local.oauth.env`** в этом скилле после **`load-yandex-oauth-env.ps1`**, **или**
    - настроек плагина **`oauthToken`** (см. `configSchema` в `openclaw.plugin.json`), **или**
    - переменной окружения **`YANDEX_METRIKA_OAUTH_TOKEN`** (если хост OpenClaw так настроен), **или**
    - пользователь явно передал токен **один раз** для текущей сессии — тогда использовать, но **не** повторять токен обратно в ответе и **не** вставлять в файлы репозитория.
-2. Если токена **нет** — **не** вызывать API и **не** придумывать ответ Метрики. Следуй разделу **«Онбординг человека»** выше: сначала **`{baseDir}/docs/INSTALL-FOR-HUMANS-RU.md`**, галочки OAuth, [**@wordprais**](https://t.me/wordprais), затем **`{baseDir}/docs/INSTRUCTION-GET-TOKEN-RU.md`**; при наличии **`oauthClientId`** — ссылка `authorize?response_type=token&client_id=...`.
+2. Если токена **нет** — **не** вызывать API и **не** придумывать ответ Метрики. Следуй разделу **«Онбординг человека»** выше: сначала **`{baseDir}/docs/INSTALL-FOR-HUMANS-RU.md`**, галочки OAuth, контакты автора **Андрея Русских** ([Telegram @wordprais](https://t.me/wordprais), [Instagram](https://www.instagram.com/wordprais/), [wordprais.ru](https://wordprais.ru)), затем **`{baseDir}/docs/INSTRUCTION-GET-TOKEN-RU.md`**; при наличии **`oauthClientId`** — ссылка `authorize?response_type=token&client_id=...`.
 3. **`defaultCounterId`** из конфига: если пользователь не назвал счётчик — используй это значение и **одной строкой** напиши: «использую счётчик по умолчанию из конфига OpenClaw».
 4. Любые `curl`/команды в чат — только с плейсхолдером **`$env:YANDEX_METRIKA_OAUTH_TOKEN`** или «подставь токен из секрета OpenClaw», **не** вставляй токен целиком.
 5. **Windows / PowerShell:** если `curl -H "Authorization: OAuth …"` даёт ошибки из‑за кавычек — используй **`Invoke-RestMethod`** с `-Headers @{ Authorization = 'OAuth ' + $env:YANDEX_METRIKA_OAUTH_TOKEN }`** или заголовок через **конкатенацию** в скобках: `-H ('Authorization: OAuth ' + $env:YANDEX_METRIKA_OAUTH_TOKEN)`. Подробно: **`{baseDir}/docs/OPENCLAW-AGENT.md`**, **`{baseDir}/docs/EXAMPLES.md`**.
@@ -84,7 +79,7 @@ curl.exe -s -G "https://api-metrika.yandex.net/stat/v1/data" `
 
 ---
 
-## Сценарий: «пришли ежедневную статистику по сайту wordprais»
+## Сценарий: «пришли ежедневную статистику по моему сайту wordprais.ru (WordPress)»
 
 Так OpenClaw **должен** отработать запрос (и что увидит человек в ответе).
 
@@ -92,7 +87,7 @@ curl.exe -s -G "https://api-metrika.yandex.net/stat/v1/data" `
 
 1. **Токен** — из `oauthToken` / `YANDEX_METRIKA_OAUTH_TOKEN`. Нет токена → стоп, ссылка на `{baseDir}/docs/INSTRUCTION-GET-TOKEN-RU.md`.
 2. **Счётчик** — если в конфиге есть **`defaultCounterId`** и пользователь не просил другой сайт, можно спросить: «использовать счётчик по умолчанию?» или сразу использовать, если контекст однозначен.
-3. Иначе: **`GET /management/v1/counters`** с **`search_string=wordprais`** (или фрагмент домена сайта). Если **несколько** счётчиков — перечислить `id`, `name`, `site` и **попросить выбрать** один `id`.
+3. Иначе: **`GET /management/v1/counters`** с **`search_string=wordprais`** (или другой фрагмент домена **моего сайта**). Если **несколько** счётчиков — перечислить `id`, `name`, `site` и **попросить выбрать** один `id`.
 4. **Период** — если не сказан, предложить по умолчанию, например **вчера − 29 дней … вчера** (без «сегодня» для стабильности данных) или уточнить у пользователя.
 5. **Ежедневная разбивка** — API отчётов:
    - вариант А: `GET .../stat/v1/data` с группировкой по дню визита **`dimensions=ym:s:date`**, **`metrics`** по задаче (часто `ym:s:visits`, при необходимости `ym:s:pageviews`, `ym:s:users` — имена проверять в [справочнике](https://yandex.ru/dev/metrika/ru/stat/));
@@ -106,14 +101,14 @@ curl.exe -s -G "https://api-metrika.yandex.net/stat/v1/data" `
 
 Пример формулировки:
 
-- «Счётчик: **…** (`id` …), сайт **wordprais.ru**, период **…**. Ниже визиты по дням. Данные из API Метрики, токен из конфига OpenClaw.»
+- «Счётчик: **…** (`id` …), сайт **wordprais.ru** (WordPress), период **…**. Ниже визиты по дням. Данные из API Метрики, токен из конфига OpenClaw.»
 - Далее строки вида: `2025-03-01 — визиты: 120`, …
 - Примечание при 429: «Сработала квота отчётов; повтори через несколько минут» (`{baseDir}/docs/04-quotas.md`).
 
 ### Пример цепочки запросов (PowerShell, без секрета в логах чата)
 
 ```powershell
-# 1) Найти счётчик по подстроке (например wordprais)
+# 1) Найти счётчик по подстроке (пример: wordprais — домен моего сайта)
 curl.exe -s -G "https://api-metrika.yandex.net/management/v1/counters" `
   --data-urlencode "search_string=wordprais" `
   --data-urlencode "per_page=50" `

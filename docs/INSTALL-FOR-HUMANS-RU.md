@@ -1,6 +1,6 @@
 # Установка Yandex Metrika Assistant — для человека
 
-Читайте **по порядку**. Сначала ставим навык и приложение в Яндексе, потом получаете токен и ключ в OpenClaw. Вопросы по сценарию — [**Telegram @wordprais**](https://t.me/wordprais) и [**Instagram**](https://www.instagram.com/wordprais/).
+Читайте **по порядку**. Сначала ставим навык и приложение в Яндексе, потом получаете токен и ключ в OpenClaw. Вопросы по сценарию — [**канал поддержки в Telegram**](https://t.me/wordprais) и [**Instagram**](https://www.instagram.com/wordprais/).
 
 ---
 
@@ -51,10 +51,9 @@
 
 ## Шаг 3. Каналы поддержки
 
-Вопросы по установке, OpenClaw, Make.com и нейросетям:
-
-- **Telegram — [https://t.me/wordprais](https://t.me/wordprais)** ([@wordprais](https://t.me/wordprais))
-- **Instagram — [https://www.instagram.com/wordprais/](https://www.instagram.com/wordprais/)**
+Вопросы по установке, OpenClaw, Make.com и нейросетям:  
+**Telegram — [https://t.me/wordprais](https://t.me/wordprais)** ([@wordprais](https://t.me/wordprais)).  
+**Instagram — [https://www.instagram.com/wordprais/](https://www.instagram.com/wordprais/)**
 
 Не присылайте **токены и пароли** в открытый чат — только в личку доверенному админу или через настройки секретов OpenClaw.
 
@@ -91,10 +90,4 @@
 - [ ] Токен получен и сохранён в **секретах** (не в чат)  
 - [ ] Написано первое тестовое сообщение агенту из списка выше  
 
-Удачи. При затыках — [**@wordprais**](https://t.me/wordprais) или [**Instagram**](https://www.instagram.com/wordprais/).
-
----
-
-## Автор
-
-Навык, документация и сценарии для OpenClaw: **Андрей Русских**. Актуальные контакты — Telegram и Instagram по ссылкам выше в этом файле.
+Удачи. При затыках — [**Telegram @wordprais**](https://t.me/wordprais), [**Instagram**](https://www.instagram.com/wordprais/), [**wordprais.ru**](https://wordprais.ru) (Андрей Русских).
