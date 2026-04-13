@@ -50,7 +50,7 @@ homepage: https://github.com/russkih75-ctrl/yandex-metrika-assistant
 2. Если токена **нет** — **не** вызывать API и **не** придумывать ответ Метрики. Следуй разделу **«Онбординг человека»** выше: сначала **`{baseDir}/docs/INSTALL-FOR-HUMANS-RU.md`**, галочки OAuth, контакты автора **Андрея Русских** ([Telegram @wordprais](https://t.me/wordprais), [Instagram](https://www.instagram.com/wordprais/), [wordprais.ru](https://wordprais.ru)), затем **`{baseDir}/docs/INSTRUCTION-GET-TOKEN-RU.md`**; при наличии **`oauthClientId`** — ссылка `authorize?response_type=token&client_id=...`.
 3. **`defaultCounterId`** из конфига: если пользователь не назвал счётчик — используй это значение и **одной строкой** напиши: «использую счётчик по умолчанию из конфига OpenClaw».
 4. Любые `curl`/команды в чат — только с плейсхолдером **`$env:YANDEX_METRIKA_OAUTH_TOKEN`** или «подставь токен из секрета OpenClaw», **не** вставляй токен целиком.
-5. **Windows / PowerShell:** если `curl -H "Authorization: OAuth …"` даёт ошибки из‑за кавычек — используй **`Invoke-RestMethod`** с `-Headers @{ Authorization = 'OAuth ' + $env:YANDEX_METRIKA_OAUTH_TOKEN }`** или заголовок через **конкатенацию** в скобках: `-H ('Authorization: OAuth ' + $env:YANDEX_METRIKA_OAUTH_TOKEN)`. Подробно: **`{baseDir}/docs/OPENCLAW-AGENT.md`**, **`{baseDir}/docs/EXAMPLES.md`**.
+5. **Windows / PowerShell:** если `curl -H "Authorization: OAuth …"` даёт ошибки из‑за кавычек — используй `Invoke-RestMethod` с `-Headers @{ Authorization = 'OAuth ' + $env:YANDEX_METRIKA_OAUTH_TOKEN }` или заголовок через **конкатенацию** в скобках: `-H ('Authorization: OAuth ' + $env:YANDEX_METRIKA_OAUTH_TOKEN)`. Подробно: **`{baseDir}/docs/OPENCLAW-AGENT.md`**, **`{baseDir}/docs/EXAMPLES.md`**.
 
 ---
 
@@ -93,7 +93,7 @@ curl.exe -s -G "https://api-metrika.yandex.net/stat/v1/data" `
    - вариант А: `GET .../stat/v1/data` с группировкой по дню визита **`dimensions=ym:s:date`**, **`metrics`** по задаче (часто `ym:s:visits`, при необходимости `ym:s:pageviews`, `ym:s:users` — имена проверять в [справочнике](https://yandex.ru/dev/metrika/ru/stat/));
    - вариант Б: `GET .../stat/v1/data/bytime` — если удобнее именно «по времени» (см. openapi в доке stat).
 6. Вызвать API (или дать пользователю **одну** готовую команду с плейсхолдерами), распарсить JSON.
-7. Если в ответе **`contains_sensitive_data": true`** — кратко предупредить про ограничение раскрытия данных.
+7. Если в ответе JSON поле `contains_sensitive_data` равно `true` — кратко предупредить про ограничение раскрытия данных.
 
 ### Как выглядит ответ человеку (шаблон)
 
